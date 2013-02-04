@@ -1,4 +1,4 @@
-""" Basic blog using webpy 0.3 """ 
+#coding:utf-8
 import web
 import model
 
@@ -18,7 +18,7 @@ urls = (
 t_globals = {
     'datestr': web.datestr
 }
-render = web.template.render('templates', base='base', globals=t_globals)
+render = web.template.render('templates',base='base', globals=t_globals)
 
 
 class Index:
@@ -101,7 +101,7 @@ class Text:
             return render.text(form)
         else:
             model.post_text(str(form.d.con))
-            return "test! %s   %s   %s "% (form.d.con,form['con'].value,form)
+            return "%s have sent!"%(form.d.con)
         raise web.seeother('/text')  
         
 
