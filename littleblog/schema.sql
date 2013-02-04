@@ -1,6 +1,5 @@
-CREATE TABLE entries (
+CREATE TABLE text (
     id INT AUTO_INCREMENT,
-    title TEXT,
     content TEXT,
     posted_on DATETIME,
     primary key (id)

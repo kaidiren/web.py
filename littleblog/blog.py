@@ -1,4 +1,4 @@
-""" Basic blog using webpy 0.3 """
+""" Basic blog using webpy 0.3 """ 
 import web
 import model
 
@@ -10,6 +10,7 @@ urls = (
     '/new', 'New',
     '/delete/(\d+)', 'Delete',
     '/edit/(\d+)', 'Edit',
+    '/text','Text',
 )
 
 
@@ -84,6 +85,25 @@ class Edit:
         model.update_post(int(id), form.d.title, form.d.content)
         raise web.seeother('/')
 
+
+class Text:
+ 
+    form = web.form.Form(
+        web.form.Textarea('con',description="")
+    )
+
+    def GET(self):
+        form = self.form()
+        return render.text(form)
+    def POST(self):
+        form = self.form()
+        if not form.validates():
+            return render.text(form)
+        else:
+            model.post_text(str(form.d.con))
+            return "test! %s   %s   %s "% (form.d.con,form['con'].value,form)
+        raise web.seeother('/text')  
+        
 
 app = web.application(urls, globals())
 

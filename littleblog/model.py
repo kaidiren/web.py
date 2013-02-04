@@ -1,6 +1,6 @@
 import web, datetime
 
-db = web.database(dbn="mysql",db="blog",user="rkd",pw="******")
+db = web.database(dbn="mysql",db="blog",user="rkd",pw="rkd19911213")
 
 def get_posts():
     return db.select('entries', order='id DESC')
@@ -20,3 +20,12 @@ def del_post(id):
 def update_post(id, title, text):
     db.update('entries', where="id=$id", vars=locals(),
         title=title, content=text)
+
+#########################################################
+def get_text():
+	return db.select('text',order='id DESC')
+
+#########################################################
+def post_text(text):
+	db.insert('text',content=text,posted_on=datetime.datetime.utcnow())
+###############################################################
