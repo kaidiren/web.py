@@ -1,0 +1,27 @@
+$def with (content, url)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Notes</title>
+$if url:
+    <meta http-equiv="refresh" content="5;URL=$url" />
+<style type="text/css">
+    body { background:#EEE; font: 14px/1.5 Trebuchet MS, Arial,Helvetica, sans-serif; text-align:center; margin-top:50px; }
+    .content { background:#FFF; width:400px; border:3px solid #CCC; border-radius:5px; padding:10px 20px; margin:auto; text-align:left;}
+</style>
+</head>
+<body>
+    <div class="content">
+        <h1 style="font-weight:400;">
+            $:content
+            $if url:
+                正在跳转... <a href="$url">url</a>
+        </h1>
+        <p>
+            <a href="javascript: history.back();">返回</a> |
+            <a href="/">首页</a>
+        </p>
+    </div>
+</body>
+</html>
