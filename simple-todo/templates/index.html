@@ -13,9 +13,9 @@ $:render.header()
                             $ status = ''
                         <li $:status>
                             $if todo.finished == 0:
-                                <img  src="$config.static/images/doing.gif" width="11px"; height="11px";/>
+                                <img  src="/static/images/doing.gif" width="11px"; height="11px";/>
                                 &nbsp;
-                                $todo.title
+                                $:todo.title.replace('(1)','<img src="/static/images/face/1.gif"/>')
                                 &nbsp;
                                 <a href="/todo/$todo.id/finish?status=yes">完成</a>,
                             $if todo.finished == 1:
@@ -32,6 +32,8 @@ $:render.header()
 
             <div class="box post">
                 <h2>新增</h2>
+                $for i in range(1,49):
+                        <img src="/static/images/face/$(i).gif" />
                 <form action="/todo/new" method="post" id="post_new">
                     <p><input type="text" name="title" class="long_txt" /></p>
                     <p><input type="submit" class="submit" value="添加" /></p>

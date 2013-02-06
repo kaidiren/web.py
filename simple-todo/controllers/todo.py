@@ -3,6 +3,9 @@
 import web
 from config import settings
 from datetime import datetime
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 render = settings.render
 db = settings.db
