@@ -11,12 +11,13 @@ render = settings.render
 db = settings.db
 tb = 'todo'
 
+
+
 def get_by_id(id):
     s = db.select(tb, where='id=$id', vars=locals())
     if not s:
         return False
     return s[0]
-
 
 class New:
 
