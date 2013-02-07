@@ -22,7 +22,7 @@ class New:
 
     def POST(self):
         i = web.input()
-        title = i.get('title', None)
+        title = i['title']
         if not title:
             return render.error('标题是必须的', None)
         db.insert(tb, title=title, post_date=datetime.now())
@@ -79,5 +79,7 @@ class Delete:
 class Index:
 
     def GET(self):
-        todos = db.select(tb, order='finished asc, id asc')
-        return render.index(todos)
+        todos1 = db.select(tb, order='finished asc, id asc')
+        todos2 = db.select(tb, order='finished asc, id asc')
+
+        return render.index(todos1,todos2)

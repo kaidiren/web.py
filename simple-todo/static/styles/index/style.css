@@ -14,7 +14,6 @@ body { background:#EEE; }
 .tips { color:#666; }
 .long_txt { width:98%; }
 .must_be { color:red !important; }
-textarea { line-height:1.5em; }
 
 image { border:none; }
 p { line-height:1.5em; }
@@ -37,7 +36,6 @@ a:hover { color:#FF3300; }
                 .todos ul li { list-style-type:none; margin-bottom:10px; padding-bottom:10px; border-bottom:1px dotted #CCC; }
                 .todos ul li.finished { color:#666; }
                 .todos ul li a { color:#666; }
-               /* .todos ul li del { padding-left:15px; background:url(images/ok.gif) no-repeat left center; } */
 
             .post {  }
                 .post p { margin-bottom:10px; }
