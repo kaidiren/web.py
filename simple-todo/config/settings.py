@@ -59,7 +59,6 @@ replaceList = [
 ('(48)', '<img src="/static/images/face/48.gif"/>')
 ]
 
-temp=""
 config = web.storage(
     email='qichangxing@gmail.com',
     site_name = '任务跟踪',
@@ -71,4 +70,3 @@ config = web.storage(
 web.template.Template.globals['config'] = config
 web.template.Template.globals['render'] = render
 web.template.Template.globals['replaceList'] = replaceList
-web.template.Template.globals['temp'] = temp
