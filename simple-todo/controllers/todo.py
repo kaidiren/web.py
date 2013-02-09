@@ -10,6 +10,7 @@ sys.setdefaultencoding('utf-8')
 render = settings.render
 db = settings.db
 tb = 'todo'
+user='user'
 
 
 
@@ -84,3 +85,29 @@ class Index:
         todos2 = db.select(tb, order='finished asc, id asc')
 
         return render.index(todos1,todos2)
+
+
+class AddUser:
+
+    def GET():
+        return render.adduser()
+
+    def POST():
+        pass
+
+class Login:
+
+    def GET():
+        pass
+
+    def POST():
+        pass
+
+
+class Admin:
+
+    def GET():
+        pass
+
+    def POST():
+        pass
