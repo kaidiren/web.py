@@ -61,7 +61,7 @@ class Edit:
         if not todo:
             return render.error('没找到这条记录', None)
         i = web.input()
-        title = i.get('title', None)
+        title = i['title']
         if not title:
             return render.error('标题是必须的', None)
         db.update(tb, title=title, where='id=$id', vars=locals())

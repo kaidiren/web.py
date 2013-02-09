@@ -1,4 +1,27 @@
-textarea{
+.box textarea{
 	width: 96% !important;
 	height: 200px !important;
+}
+
+.todos ul li{
+   list-style-type:none; 
+   margin-bottom:6px; 
+   padding-bottom:6px; 
+   border-bottom:1px dotted #a2a2a2;
+}
+
+.page { 
+    width:700px; 
+    margin:10px auto; 
+    background:#FFF;
+    padding:10px 20px; 
+    border:1px solid #CCC; 
+    border-radius:5px;
+}
+
+.box{
+  margin:10px auto;
+  border:1px solid #CCC; 
+  border-radius:5px;
+  padding:20px 20px;
 }

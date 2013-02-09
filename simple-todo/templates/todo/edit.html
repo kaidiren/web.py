@@ -1,12 +1,14 @@
 $def with(todo)
 $:render.header()
-
-        <div class="box post">
-            <h2>修改</h2>
-            <form action="?" method="post">
-                <p><input type="text" name="title" class="long_txt" value="$todo.title" /></p>
-                    <input type="submit" class="submit" value="提交" />
-                </p>
+        <p>请修改下边的内容...</p>
+        <div class="box">
+            $for i in range(1,49):
+                        <a href="javascript:void(0)" onClick="addtext('($(i))')"><img src="/static/images/face/$(i).gif" /></a>
+            <br/>
+            <br/>
+            <form action="?" method="post" name="form">
+                <p><textarea name="title" >$todo.title</textarea>
+                <p style="text-align:right;margin-right:12px"><input type="submit" class="submit btn btn-primary" value="改好了" /></p>
             </form>
         </div>
 

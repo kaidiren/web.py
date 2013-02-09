@@ -61,7 +61,7 @@ replaceList = [
 
 config = web.storage(
     email='qichangxing@gmail.com',
-    site_name = '任务跟踪',
+    site_name = 'simple-todo',
     site_desc = '',
     static = '/static',
 )
