@@ -54,9 +54,7 @@ replaceList = [
 ('(43)', '<img src="/static/images/face/43.gif"/>'),
 ('(44)', '<img src="/static/images/face/44.gif"/>'),
 ('(45)', '<img src="/static/images/face/45.gif"/>'),
-('(46)', '<img src="/static/images/face/46.gif"/>'),
-('(47)', '<img src="/static/images/face/47.gif"/>'),
-('(48)', '<img src="/static/images/face/48.gif"/>')
+('(46)', '<img src="/static/images/face/46.gif"/>')
 ]
 
 config = web.storage(
